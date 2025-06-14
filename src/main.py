@@ -10,11 +10,9 @@ def check_microphone():
         with sr.Microphone() as source:
             print("Testing microphone...")
             recognizer = sr.Recognizer()
-            # Increase sensitivity for testing
             recognizer.dynamic_energy_threshold = True
-            recognizer.energy_threshold = 100  # Much lower threshold
-            recognizer.pause_threshold = 0.3   # Shorter pause
-            recognizer.adjust_for_ambient_noise(source, duration=2)  # Longer calibration
+            recognizer.energy_threshold = 100
+            recognizer.pause_threshold = 0.3
             print("Microphone is working!")
             return True
     except Exception as e:
