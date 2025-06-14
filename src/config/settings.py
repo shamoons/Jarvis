@@ -13,9 +13,9 @@ class Settings(BaseSettings):
     WAKE_WORD: str = "hey jarvis"
     
     # Model Parameters
-    TEMPERATURE: float = 0.7
-    MAX_TOKENS: int = 512
-    TOP_P: float = 0.95
+    TEMPERATURE: float = 0.7  # More creative and varied responses
+    MAX_TOKENS: int = 2048    # Allow for very long, detailed responses
+    TOP_P: float = 0.9       # More diverse sampling
     
     class Config:
         env_file = ".env"

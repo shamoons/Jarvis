@@ -1,4 +1,6 @@
 llama-cpp-python==0.2.23
 picovoice==3.0.2
 python-dotenv==1.0.0
-pydantic==2.6.1 
+pydantic==2.6.1
+SpeechRecognition==3.10.0
+PyAudio==0.2.13 
