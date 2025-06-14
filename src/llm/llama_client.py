@@ -36,11 +36,11 @@ class LlamaClient:
             self.speaker = win32com.client.Dispatch("SAPI.SpVoice")
             voices = self.speaker.GetVoices()
             
-            # Try to select a female voice
+            # Try to select a male voice
             selected_voice = None
             for i in range(voices.Count):
                 desc = voices.Item(i).GetDescription()
-                if "Zira" in desc or "Hazel" in desc or "Female" in desc:  # Prefer female voices
+                if "David" in desc or "Mark" in desc or "Male" in desc:  # Prefer male voices
                     selected_voice = voices.Item(i)
                     break
             
@@ -53,7 +53,7 @@ class LlamaClient:
                 print(f"Using voice: {voices.Item(0).GetDescription()}")
             
             # Optimize voice settings for clear audio
-            self.speaker.Rate = -1  # Slightly slower rate for more natural speech
+            self.speaker.Rate = 0  # Normal rate
             self.speaker.Volume = 100  # Full volume
             self.speaker.Priority = 2  # High priority
             
@@ -76,6 +76,9 @@ class LlamaClient:
         - Use simple explanations
         - Be reliable and consistent
         - Maintain a helpful attitude
+        - Avoid marketing language or sales pitches
+        - Focus on being genuinely helpful rather than promotional
+        - Give direct, practical answers
 
         Talk like a knowledgeable friend who's there to help. Be clear and direct while keeping a friendly tone. Your goal is to be a reliable assistant who provides useful information in a warm, approachable way."""
     
