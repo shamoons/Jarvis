@@ -1,6 +1,6 @@
 # Jarvis - Your AI Desk Buddy
 
-A voice-activated AI assistant that uses Llama for natural language processing. Built to run efficiently on Raspberry Pi.
+A voice-activated AI assistant that uses TinyLlama for natural language processing. Built to run efficiently on Raspberry Pi.
 
 ## Setup
 
@@ -9,13 +9,13 @@ A voice-activated AI assistant that uses Llama for natural language processing. 
 uv pip install -r requirements.txt
 ```
 
-2. Download Llama model:
-   - Visit [Hugging Face](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF) to download a GGUF model
-   - Place it in the `models` directory
+2. Download TinyLlama model:
+   - Visit [Hugging Face](https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF) to download a GGUF model
+   - Place it in the `models` directory (recommended: tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf)
 
 3. Create a `.env` file with your configuration:
 ```bash
-LLAMA_MODEL_PATH=models/llama-2-7b-chat.Q4_K_M.gguf
+LLAMA_MODEL_PATH=models/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf
 ```
 
 ## Usage
